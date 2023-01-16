@@ -1,4 +1,5 @@
-﻿using MollaevYaroshevski.PageFolder;
+﻿using MollaevYaroshevski.ClassFolder;
+using MollaevYaroshevski.PageFolder;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -32,11 +33,28 @@ namespace MollaevYaroshevski.WindowFolder
         private void ListBD_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             MainFrame.Navigate(new ListUserPAge());
+            
         }
 
         private void AddBD_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             MainFrame.Navigate(new AddUserPage());
+        }
+
+        private void Image_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            Close();
+        }
+
+        private void BackBD_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            new AuthorizationWindow().Show();
+            Close();
+        }
+
+        private void Border_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            DragMove();
         }
     }
 }

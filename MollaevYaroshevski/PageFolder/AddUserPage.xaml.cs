@@ -24,5 +24,6 @@ namespace MollaevYaroshevski.PageFolder
         {
             InitializeComponent();
         }
+        
     }
 }
