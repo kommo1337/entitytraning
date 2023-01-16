@@ -82,5 +82,15 @@ namespace MollaevYaroshevski.WindowFolder
         {
             DragMove();
         }
+
+        private void Border_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            DragMove();
+        }
+
+        private void Image_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            Close();
+        }
     }
 }

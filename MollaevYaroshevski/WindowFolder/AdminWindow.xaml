@@ -5,24 +5,94 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MollaevYaroshevski.WindowFolder"
         mc:Ignorable="d"
-        Title="AdminWindow" Height="470" Width="800" ResizeMode="NoResize">
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="108*"/>
-            <RowDefinition Height="47*"/>
-            <RowDefinition Height="47*"/>
-            <RowDefinition Height="179*"/>
-            <RowDefinition Height="60*"/>
-        </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="105*"/>
-            <ColumnDefinition Width="292*"/>
-        </Grid.ColumnDefinitions>
-        <Image Source="/MollaevYaroshevski;component/ResourceFolder/ImageFolder/Logo.png" Grid.Row="0"/>
-        <Button x:Name="Spisock" Content="Список пользователей" Grid.Row="1" Foreground="Wheat" Margin="4,7,3,5" Click="Spisock_Click"/>
-        <Button x:Name="AddUser" Content="Добавить Юзера" Grid.Row="2" Foreground="Wheat" Margin="4,7,3,5" Click="AddUser_Click"/>
-        <Button x:Name="BackBtn" Content="Назад" Grid.Row="4" Foreground="Wheat" Margin="4,7,3,5"/>
-        <Frame Grid.Column="1"  x:Name="MainFrame" Margin="6,14,10,5"
-                       NavigationUIVisibility="Hidden" Grid.RowSpan="5"/>
-    </Grid>
+        Title="AdminWindow" Height="470" Width="800" ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen" WindowStyle="None" AllowsTransparency="True" Background="Transparent" >
+    <Border Background="#101e41" CornerRadius="6">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="96*"/>
+                <RowDefinition Height="49*"/>
+                <RowDefinition Height="57*"/>
+                <RowDefinition Height="15*"/>
+                <RowDefinition Height="57*"/>
+                <RowDefinition Height="132*"/>
+                <RowDefinition Height="64*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="105*"/>
+                <ColumnDefinition Width="292*"/>
+            </Grid.ColumnDefinitions>
+            <Border Background="#f72c7e" Grid.ColumnSpan="2" CornerRadius="6,6,0,27" Grid.RowSpan="1"/>
+
+            <Image Source="/MollaevYaroshevski;component/ResourceFolder/ImageFolder/Logo.png" Grid.Row="0" Grid.RowSpan="1"/>
+            <Border x:Name="ListBD"  CornerRadius="17" Grid.Row="2" Grid.ColumnSpan="1"  Margin="10,5,13,5" MouseLeftButtonDown="ListBD_MouseLeftButtonDown">
+                <Border.Effect>
+                    <DropShadowEffect BlurRadius="4" Color="#f72c7e" Opacity="10" Direction="1" ShadowDepth="0"/>
+                </Border.Effect>
+                <Label Content="Список"  Style="{DynamicResource LabelNormalStyle}" Margin="18,0,18,2">
+                    <Label.Effect>
+                        <DropShadowEffect BlurRadius="25" Color="White" Opacity="100" Direction="1" ShadowDepth="0" />
+                    </Label.Effect>
+                </Label>
+                <Border.Style>
+                    <Style TargetType="Border">
+                        <Setter Property="Background" Value="#f72c7e"/>
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#e80962"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+
+                </Border.Style>
+            </Border>
+
+            <Border x:Name="AddBD"  CornerRadius="17" Grid.Row="4" Grid.ColumnSpan="1"  Margin="10,5,13,5" MouseLeftButtonDown="AddBD_MouseLeftButtonDown">
+                <Border.Effect>
+                    <DropShadowEffect BlurRadius="4" Color="#f72c7e" Opacity="10" Direction="1" ShadowDepth="0"/>
+                </Border.Effect>
+                <Label Content="Добавление"  Style="{DynamicResource LabelNormalStyle}" Margin="18,0,18,2">
+                    <Label.Effect>
+                        <DropShadowEffect BlurRadius="25" Color="White" Opacity="100" Direction="1" ShadowDepth="0" />
+                    </Label.Effect>
+                </Label>
+                <Border.Style>
+                    <Style TargetType="Border">
+                        <Setter Property="Background" Value="#f72c7e"/>
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#e80962"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+
+                </Border.Style>
+            </Border>
+
+            <Border x:Name="BackBD"  CornerRadius="17" Grid.Row="6" Grid.ColumnSpan="1"  Margin="10,5,13,5">
+                <Border.Effect>
+                    <DropShadowEffect BlurRadius="4" Color="#f72c7e" Opacity="10" Direction="1" ShadowDepth="0"/>
+                </Border.Effect>
+                <Label Content="Назад"  Style="{DynamicResource LabelNormalStyle}" Margin="18,0,18,2">
+                    <Label.Effect>
+                        <DropShadowEffect BlurRadius="25" Color="White" Opacity="100" Direction="1" ShadowDepth="0" />
+                    </Label.Effect>
+                </Label>
+                <Border.Style>
+                    <Style TargetType="Border">
+                        <Setter Property="Background" Value="#f72c7e"/>
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#e80962"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+
+                </Border.Style>
+            </Border>
+            <Frame Grid.Column="1"  x:Name="MainFrame" 
+                       NavigationUIVisibility="Hidden" Grid.RowSpan="7" Margin="0,0,0,5"/>
+        </Grid>
+    </Border>
+
 </Window>

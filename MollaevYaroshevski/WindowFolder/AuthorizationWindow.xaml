@@ -9,7 +9,7 @@
         Height="410" Width="400"
         ResizeMode="NoResize"
         WindowStartupLocation="CenterScreen" WindowStyle="None" AllowsTransparency="True" Background="Transparent">
-    <Border Background ="#101e41" CornerRadius="4" MouseDown="Border_MouseDown">
+    <Border Background ="#101e41" CornerRadius="4" MouseLeftButtonDown="Border_MouseLeftButtonDown" >
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
@@ -110,7 +110,7 @@
                     </Label.Effect>
                 </Label>
             </Border>
-
+            <Image Source="/MollaevYaroshevski;component/ResourceFolder/ImageFolder/Close.png" Margin="227,4,3,82" Grid.Column="1" MouseLeftButtonDown="Image_MouseLeftButtonDown" Grid.RowSpan="2"/>
 
         </Grid>
     </Border>

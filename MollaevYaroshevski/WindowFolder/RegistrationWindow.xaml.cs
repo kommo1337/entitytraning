@@ -26,22 +26,29 @@ namespace MollaevYaroshevski.WindowFolder
             InitializeComponent();
         }
 
-        private void RegBTN_Click(object sender, RoutedEventArgs e)
+
+
+        private void Border_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            DragMove();
+        }
+
+        private void RegBD_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             if (string.IsNullOrWhiteSpace(LoginTB.Text))
             {
                 MBClass.ErrorMB("Login");
                 LoginTB.Focus();
             }
-            else if(DBEntities.GetContext().User.FirstOrDefault(u=>u.Login==LoginTB.Text) != null)
+            else if (DBEntities.GetContext().User.FirstOrDefault(u => u.Login == LoginTB.Text) != null)
             {
                 MBClass.ErrorMB("Существует");
                 LoginTB.Focus();
             }
-            else if(string.IsNullOrWhiteSpace(PasswordPSB.Password))
+            else if (string.IsNullOrWhiteSpace(PasswordPSB.Password))
             {
                 MBClass.ErrorMB("НЕту");
-                
+
             }
             else if (string.IsNullOrWhiteSpace(RepeatPasswordPSB.Password))
             {
@@ -53,20 +60,27 @@ namespace MollaevYaroshevski.WindowFolder
                 {
                     DBEntities.GetContext().User.Add(new User()
                     {
-                        Login=LoginTB.Text,
-                        Password=PasswordPSB.Password,
-                        IdRole=2
+                        Login = LoginTB.Text,
+                        Password = PasswordPSB.Password,
+                        IdRole = 2
                     });
 
                     DBEntities.GetContext().SaveChanges();
                     MBClass.InfoMB("Успешно");
                 }
-                catch ( Exception ex)
+                catch (Exception ex)
                 {
-                    
+
                     MBClass.ErrorMB(ex);
                 }
+
+                
             }
+        }
+
+        private void Image_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            Close();
         }
     }
 }

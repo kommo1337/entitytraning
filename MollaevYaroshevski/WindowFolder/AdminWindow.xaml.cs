@@ -25,12 +25,16 @@ namespace MollaevYaroshevski.WindowFolder
             InitializeComponent();
         }
 
-        private void Spisock_Click(object sender, RoutedEventArgs e)
+
+
+
+
+        private void ListBD_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             MainFrame.Navigate(new ListUserPAge());
         }
 
-        private void AddUser_Click(object sender, RoutedEventArgs e)
+        private void AddBD_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             MainFrame.Navigate(new AddUserPage());
         }
