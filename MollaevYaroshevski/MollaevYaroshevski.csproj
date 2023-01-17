@@ -69,6 +69,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="ClassFolder\MBClass.cs" />
+    <Compile Include="ClassFolder\VariableClass.cs" />
     <Compile Include="DataFolder\ContextClass.cs" />
     <Compile Include="DataFolder\DBModel.Context.cs">
       <AutoGen>True</AutoGen>

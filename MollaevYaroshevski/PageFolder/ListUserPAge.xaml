@@ -26,13 +26,31 @@
             </Label>
             <Image Source="/MollaevYaroshevski;component/ResourceFolder/ImageFolder/search.png" Margin="30,24,206,327.333" Grid.Row="1" Grid.RowSpan="2" />
             <TextBox 
-                 Grid.Row="1" x:Name="SearchTB" BorderThickness="0,0,0,0.3" Background="Transparent" BorderBrush="WhiteSmoke" Foreground="White" CaretBrush="White" Grid.ColumnSpan="2" Margin="115,29,18,7" >
+                 Grid.Row="1" x:Name="SearchTB" TextChanged="SearchTB_TextChanged"
+                BorderThickness="0,0,0,0.3" Background="Transparent" 
+                BorderBrush="WhiteSmoke" Foreground="White" 
+                CaretBrush="White" Grid.ColumnSpan="2" Margin="115,29,18,7" >
                 <TextBox.Effect>
                     <DropShadowEffect BlurRadius="5" Color="LightGray" Opacity="100" Direction="1" ShadowDepth="0"/>
                 </TextBox.Effect>
             </TextBox>
-            <DataGrid HorizontalAlignment="Left" Height="310" Margin="10,10,0,0" Grid.Row="2" VerticalAlignment="Top" Width="568" Grid.ColumnSpan="2" Background="Transparent" Foreground="DarkGray">
-
+            <DataGrid HorizontalAlignment="Left"
+                      Height="310" Margin="10,10,0,0" 
+                      Grid.Row="2" VerticalAlignment="Top" 
+                      Width="568" Grid.ColumnSpan="2" 
+                      Background="Transparent" Foreground="DarkGray"
+                      AutoGenerateColumns="False" x:Name="UserDG">
+                <DataGrid.ContextMenu>
+                    <ContextMenu>
+                        <MenuItem Header="Редактирование пользователя" x:Name="modifyIt" Click="modifyIt_Click"/>
+                        <MenuItem Header="Удаление Пользователя" Name="deleteIt" Click="deleteIt_Click"/>
+                    </ContextMenu>
+                </DataGrid.ContextMenu>
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Id" Width="*" Binding="{Binding UserId}"/>
+                    <DataGridTextColumn Header="Login" Width="*" Binding="{Binding Login}"/>
+                    <DataGridTextColumn Header="Password" Width="*" Binding="{Binding Password}"/>
+                </DataGrid.Columns>
             </DataGrid>
 
         </Grid>

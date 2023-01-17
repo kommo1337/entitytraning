@@ -1,4 +1,6 @@
-﻿using System;
+﻿using MollaevYaroshevski.ClassFolder;
+using MollaevYaroshevski.DataFolder;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +25,32 @@ namespace MollaevYaroshevski.PageFolder
         public ListUserPAge()
         {
             InitializeComponent();
+            UserDG.ItemsSource = DBEntities.GetContext().User.ToList()
+            .OrderBy(c => c.IdUser);
+        }
+
+        private void modifyIt_Click(object sender, RoutedEventArgs e)
+        {
+            User user = UserDG.SelectedItem as User;
+            VariableClass.IdUser = user.IdUser;
+        }
+
+        private void deleteIt_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void SearchTB_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            try
+            {
+                UserDG.ItemsSource = DBEntities.GetContext().User.Where
+                (u => u.Login.StartsWith(SearchTB.Text)).ToList();
+            }
+            catch (Exception ex)
+            {
+                MBClass.ErrorMB(ex);
+            }
         }
     }
 }
