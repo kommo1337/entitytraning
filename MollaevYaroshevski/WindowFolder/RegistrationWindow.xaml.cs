@@ -3,6 +3,7 @@ using MollaevYaroshevski.DataFolder;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -24,13 +25,7 @@ namespace MollaevYaroshevski.WindowFolder
         public RegistrationWindow()
         {
             InitializeComponent();
-        }
-
-
-
-        private void Border_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
-        {
-            DragMove();
+            SecBorder.MouseLeftButtonDown += (o, e) => DragMove();
         }
 
         private void RegBD_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)

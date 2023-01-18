@@ -24,6 +24,7 @@ namespace MollaevYaroshevski.WindowFolder
         public AuthorizationWindow()
         {
             InitializeComponent();
+            SecBorder.MouseDown += (o, e) => DragMove();
         }
 
 
@@ -78,15 +79,7 @@ namespace MollaevYaroshevski.WindowFolder
             Close();
         }
 
-        private void Border_MouseDown(object sender, MouseButtonEventArgs e)
-        {
-            DragMove();
-        }
 
-        private void Border_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
-        {
-            DragMove();
-        }
 
         private void Image_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {

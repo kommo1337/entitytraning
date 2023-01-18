@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="AdminWindow" Height="470" Width="800" ResizeMode="NoResize"
         WindowStartupLocation="CenterScreen" WindowStyle="None" AllowsTransparency="True" Background="Transparent" >
-    <Border Background="#101e41" CornerRadius="6" MouseDown="Border_MouseDown">
+    <Border Background="#101e41" CornerRadius="6" >
         <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition Height="96*"/>
@@ -22,7 +22,7 @@
                 <ColumnDefinition/>
                 <ColumnDefinition Width="588"/>
             </Grid.ColumnDefinitions>
-            <Border Background="#f72c7e" Grid.ColumnSpan="2" CornerRadius="6,6,0,27" Grid.RowSpan="1"/>
+            <Border Background="#f72c7e" Grid.ColumnSpan="2" CornerRadius="6,6,0,27" Grid.RowSpan="1" x:Name="SecBorder"/>
 
             <Image Source="/MollaevYaroshevski;component/ResourceFolder/ImageFolder/Logo.png" Grid.Row="0" Grid.RowSpan="1" Margin="0,0,75,0"/>
             <Border x:Name="ListBD"  CornerRadius="17" Grid.Row="2" Grid.ColumnSpan="1"  Margin="10,5,13,5" MouseLeftButtonDown="ListBD_MouseLeftButtonDown">

@@ -25,14 +25,14 @@ namespace MollaevYaroshevski.PageFolder
         public ListUserPAge()
         {
             InitializeComponent();
-            UserDG.ItemsSource = DBEntities.GetContext().User.ToList()
-            .OrderBy(c => c.IdUser);
+            //UserDG.ItemsSource = DBEntities.GetContext().User.ToList()
+            //.OrderBy(c => c.IdUser);
         }
 
         private void modifyIt_Click(object sender, RoutedEventArgs e)
         {
-            User user = UserDG.SelectedItem as User;
-            VariableClass.IdUser = user.IdUser;
+            //User user = UserDG.SelectedItem as User;
+            //VariableClass.IdUser = user.IdUser;
         }
 
         private void deleteIt_Click(object sender, RoutedEventArgs e)
@@ -42,15 +42,15 @@ namespace MollaevYaroshevski.PageFolder
 
         private void SearchTB_TextChanged(object sender, TextChangedEventArgs e)
         {
-            try
-            {
-                UserDG.ItemsSource = DBEntities.GetContext().User.Where
-                (u => u.Login.StartsWith(SearchTB.Text)).ToList();
-            }
-            catch (Exception ex)
-            {
-                MBClass.ErrorMB(ex);
-            }
+            //try
+            //{
+            //    UserDG.ItemsSource = DBEntities.GetContext().User.Where
+            //    (u => u.Login.StartsWith(SearchTB.Text)).ToList();
+            //}
+            //catch (Exception ex)
+            //{
+            //    MBClass.ErrorMB(ex);
+            //}
         }
     }
 }

@@ -9,7 +9,7 @@
         Height="430" Width="400"
         ResizeMode="NoResize"
         WindowStartupLocation="CenterScreen" WindowStyle="None" AllowsTransparency="True" Background="Transparent">
-    <Border Background ="#101e41" CornerRadius="6" MouseLeftButtonDown="Border_MouseLeftButtonDown" >
+    <Border Background ="#101e41" CornerRadius="6"  x:Name="Main" >
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
@@ -27,7 +27,7 @@
                 <RowDefinition Height="10"/>
                 <RowDefinition Height="70"/>
             </Grid.RowDefinitions>
-            <Border Background="#f72c7e" CornerRadius="1,1,0,20" Grid.ColumnSpan="2" Grid.RowSpan="2" Margin="0,0,0,10"/>
+            <Border Background="#f72c7e" CornerRadius="1,1,0,20" Grid.ColumnSpan="2" Grid.RowSpan="2" Margin="0,0,0,10" x:Name="SecBorder"/>
             <Image Grid.Column="1" Margin="219,3,3,87" Grid.RowSpan="2" Source="/MollaevYaroshevski;component/ResourceFolder/ImageFolder/Close.png" MouseLeftButtonDown="Image_MouseLeftButtonDown"  />
             <Image Source="/MollaevYaroshevski;component/ResourceFolder/ImageFolder/Logo.png" Margin="0,-17,0,0" Grid.RowSpan="2"/>
             <Label Content="Регестрация"

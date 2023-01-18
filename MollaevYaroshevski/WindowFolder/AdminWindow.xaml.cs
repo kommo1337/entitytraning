@@ -24,6 +24,7 @@ namespace MollaevYaroshevski.WindowFolder
         public AdminWindow()
         {
             InitializeComponent();
+            SecBorder.MouseDown += (o, e) => DragMove();
         }
 
 
@@ -52,9 +53,6 @@ namespace MollaevYaroshevski.WindowFolder
             Close();
         }
 
-        private void Border_MouseDown(object sender, MouseButtonEventArgs e)
-        {
-            DragMove();
-        }
+
     }
 }
