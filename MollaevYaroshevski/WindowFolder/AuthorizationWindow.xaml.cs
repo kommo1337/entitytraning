@@ -27,9 +27,6 @@ namespace MollaevYaroshevski.WindowFolder
             SecBorder.MouseDown += (o, e) => DragMove();
         }
 
-
-
-
         private void LoginBD_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             MBClass.InfoMB("kommo");
@@ -78,8 +75,6 @@ namespace MollaevYaroshevski.WindowFolder
             new RegistrationWindow().Show();
             Close();
         }
-
-
 
         private void Image_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {

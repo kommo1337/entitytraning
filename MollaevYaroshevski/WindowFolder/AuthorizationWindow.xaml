@@ -9,7 +9,15 @@
         Height="410" Width="400"
         ResizeMode="NoResize"
         WindowStartupLocation="CenterScreen" WindowStyle="None" AllowsTransparency="True" Background="Transparent">
-    <Border Background ="#101e41" CornerRadius="4"  >
+    <Border  CornerRadius="4"  >
+
+        <Border.Background>
+            <LinearGradientBrush EndPoint="0.69,0.751" StartPoint="-0.342,-0.33">
+                <GradientStop Color="#FF081944"/>
+                <GradientStop Color="#FF360C68" Offset="1"/>
+            </LinearGradientBrush>
+        </Border.Background>
+
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>

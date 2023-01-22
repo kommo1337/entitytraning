@@ -9,7 +9,15 @@
         Height="430" Width="400"
         ResizeMode="NoResize"
         WindowStartupLocation="CenterScreen" WindowStyle="None" AllowsTransparency="True" Background="Transparent">
-    <Border Background ="#101e41" CornerRadius="6"  x:Name="Main" >
+    <Border  CornerRadius="6"  x:Name="Main" >
+
+        <Border.Background>
+            <LinearGradientBrush EndPoint="0.69,0.751" StartPoint="-0.342,-0.33">
+                <GradientStop Color="#FF081944"/>
+                <GradientStop Color="#FF360C68" Offset="1"/>
+            </LinearGradientBrush>
+        </Border.Background>
+
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
@@ -27,7 +35,9 @@
                 <RowDefinition Height="10"/>
                 <RowDefinition Height="70"/>
             </Grid.RowDefinitions>
-            <Border Background="#f72c7e" CornerRadius="1,1,0,20" Grid.ColumnSpan="2" Grid.RowSpan="2" Margin="0,0,0,10" x:Name="SecBorder"/>
+            <Border Background="#f72c7e" CornerRadius="1,1,0,20" Grid.ColumnSpan="2" Grid.RowSpan="2" Margin="0,0,0,10" x:Name="SecBorder">
+                
+            </Border>
             <Image Grid.Column="1" Margin="219,3,3,87" Grid.RowSpan="2" Source="/MollaevYaroshevski;component/ResourceFolder/ImageFolder/Close.png" MouseLeftButtonDown="Image_MouseLeftButtonDown"  />
             <Image Source="/MollaevYaroshevski;component/ResourceFolder/ImageFolder/Logo.png" Margin="0,-17,0,0" Grid.RowSpan="2"/>
             <Label Content="Регестрация"

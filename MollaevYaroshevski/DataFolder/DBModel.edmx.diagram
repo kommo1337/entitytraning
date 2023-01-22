@@ -6,7 +6,7 @@
     <edmx:Diagrams>
       <Diagram DiagramId="6106918ed26049fa9b054ad6820c2fb9" Name="Diagram1">
         <EntityTypeShape EntityType="DBModel.Role" Width="1.5" PointX="0.75" PointY="1.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="DBModel.sysdiagrams" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBModel.sysdiagrams" Width="1.5" PointX="1.125" PointY="4.5" IsExpanded="true" />
         <EntityTypeShape EntityType="DBModel.User" Width="1.5" PointX="4.25" PointY="1.875" IsExpanded="true" />
         <AssociationConnector Association="DBModel.FK_User_Role" ManuallyRouted="false" />
       </Diagram>
